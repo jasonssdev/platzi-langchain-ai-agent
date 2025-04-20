@@ -1,0 +1,32 @@
+[project]
+name = "platzi-langchain-ai-agent"
+version = "0.1.0"
+description = "LangChain AI Agent"
+authors = [
+    { name = "Jason", email = "jasonssdev@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain-openai",
+    "langchain-core",
+    "langchain-community",
+    "langgraph",
+    "langchain-chroma",
+    "python-dotenv",
+    "pypdf",
+    "fastapi",
+    "langchain-huggingface",
+    "transformers",
+    "ipywidgets"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
