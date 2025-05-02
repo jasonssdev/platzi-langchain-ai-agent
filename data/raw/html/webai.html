@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Artificial Intelligence</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #111;
+            position: relative;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .content {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.3em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 1.5em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-top: 1.2em;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+
+        a {
+            color: #4cc9f0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="aiCanvas"></canvas>
+
+    <div class="content">
+        <h1>Artificial Intelligence</h1>
+        <h2>What is AI?</h2>
+        <p>
+            Artificial Intelligence (AI) is the simulation of human intelligence in machines
+            that are programmed to think, learn, and solve problems. It encompasses a wide
+            range of technologies including machine learning, natural language processing, and robotics.
+        </p>
+
+        <h3>Benefits of AI for Humanity</h3>
+        <p>
+            AI holds the potential to revolutionize healthcare, improve education access,
+            enhance transportation systems, and accelerate scientific discoveries.
+            By automating repetitive tasks, it allows humans to focus on creative and strategic work.
+        </p>
+        <p>
+            Additionally, AI can help address global challenges such as climate change,
+            resource management, and disease prevention by analyzing large-scale data efficiently.
+        </p>
+
+        <h3>Learn More</h3>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank">AI on Wikipedia</a></li>
+            <li><a href="https://www.ibm.com/cloud/learn/what-is-artificial-intelligence" target="_blank">IBM AI
+                    Overview</a></li>
+            <li><a href="https://ai.google/" target="_blank">Google AI Projects</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('aiCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const dots = [];
+
+        for (let i = 0; i < 100; i++) {
+            dots.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                r: Math.random() * 2 + 1,
+                dx: Math.random() * 0.5,
+                dy: Math.random() * 0.5
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let dot of dots) {
+                ctx.beginPath();
+                ctx.arc(dot.x, dot.y, dot.r, 0, Math.PI * 2);
+                ctx.fillStyle = '#00ffe0';
+                ctx.fill();
+
+                dot.x += dot.dx;
+                dot.y += dot.dy;
+
+                if (dot.x > canvas.width || dot.x < 0) dot.dx *= -1;
+                if (dot.y > canvas.height || dot.y < 0) dot.dy *= -1;
+            }
+
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+
+</html>

@@ -20,6 +20,8 @@ dependencies = [
     "langchain-google-vertexai",
     "langgraph-checkpoint",
     "langchain-google-genai",
+    "beautifulsoup4",
+    "lxml",
 ]
 
 [build-system]
