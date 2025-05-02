@@ -12,6 +12,11 @@ IMAGES_DIR = DOCS_DIR / "images"
 HTML_DIR = RAW_DIR / "html"
 CSV_DIR = RAW_DIR / "csv"
 PDF_DIR = RAW_DIR / "pdf"
+TXT_DIR = RAW_DIR / "txt"
+
 
 # Specific files
 WEBAI_FILE = HTML_DIR / "webai.html"
+CSVAI_FILE = CSV_DIR / "csvai.csv"
+PDFAI_FILE = PDF_DIR / "pdfai.pdf"
+TXTAI_FILE = TXT_DIR / "txtai.txt"

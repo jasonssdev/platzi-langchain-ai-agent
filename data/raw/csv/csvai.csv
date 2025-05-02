@@ -1,0 +1,6 @@
+AI_Field,Description,Popular_Library,Real_World_Application
+Machine Learning,Algorithms that learn from data to make predictions or decisions.,scikit-learn,"Spam detection, credit scoring"
+Natural Language Processing,Enables computers to understand and generate human language.,spaCy,"Chatbots, translation apps"
+Computer Vision,Allows machines to interpret and process visual information.,OpenCV,"Facial recognition, self-driving cars"
+Robotics,Design and creation of autonomous machines that can perform tasks.,ROS,"Warehouse automation, surgical robots"
+Expert Systems,AI systems that emulate decision-making abilities of a human expert.,CLIPS,"Medical diagnosis, financial advising"

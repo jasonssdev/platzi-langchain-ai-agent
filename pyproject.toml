@@ -22,6 +22,7 @@ dependencies = [
     "langchain-google-genai",
     "beautifulsoup4",
     "lxml",
+    "pytorch::faiss-cpu",
 ]
 
 [build-system]
